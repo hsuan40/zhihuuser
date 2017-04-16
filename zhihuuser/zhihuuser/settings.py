@@ -70,6 +70,7 @@ ROBOTSTXT_OBEY = False
 
 ITEM_PIPELINES = {
    'zhihuuser.pipelines.MongoPipeline': 300,
+   'scrapy_redis.pipelines.RedisPipeline': 301
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -94,3 +95,10 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 MONGO_URI='localhost'
 MONGO_DATABASE='zhihu'
+
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"   #替換調度器
+
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter" #去重
+
+
+REDIS_URL = 'redis://root:angella@45.76.50.54:6379' #redis數據庫連接的url格式（master主機redis的連接訊息）
