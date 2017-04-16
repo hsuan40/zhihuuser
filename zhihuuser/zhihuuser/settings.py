@@ -70,7 +70,7 @@ ROBOTSTXT_OBEY = False
 
 ITEM_PIPELINES = {
    'zhihuuser.pipelines.MongoPipeline': 300,
-   'scrapy_redis.pipelines.RedisPipeline': 301
+   #'scrapy_redis.pipelines.RedisPipeline': 301 #這條註釋掉就不會再redis存放item 的內容
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
