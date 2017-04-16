@@ -100,5 +100,5 @@ SCHEDULER = "scrapy_redis.scheduler.Scheduler"   #替換調度器
 
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter" #去重
 
-
-REDIS_URL = 'redis://root:angella@45.76.50.54:6379' #redis數據庫連接的url格式（master主機redis的連接訊息）
+#REDIS_URL = 'redis://root:money@22.33.44.55:6379' #redis數據庫連接的url格式（master主機redis的連接訊息）
+REDIS_URL = 'redis://name:password@hostname:6379' #redis數據庫連接的url格式（master主機redis的連接訊息）
